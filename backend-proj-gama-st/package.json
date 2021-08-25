@@ -1,0 +1,16 @@
+{
+  "name": "backend-proj-gama-st",
+  "version": "1.0.0",
+  "description": "Backend do projeto final do treinamento fullstack Gama Academy + Start Tech",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "fullstack",
+    "javascript"
+  ],
+  "author": "Leticia Ramos",
+  "license": "ISC"
+}
