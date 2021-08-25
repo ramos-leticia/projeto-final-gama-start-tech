@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const registerTemps = require(".models/cadastro-models");
+const registerTemps = require("../models/cadastroModels");
 
 router.post("/cadastro", (req, res) => {
   const usuarioCadastrado = new registerTemps({
@@ -24,6 +24,14 @@ router.post("/cadastro", (req, res) => {
     habilitacao: req.body.habilitacao,
     password: req.body.password,
   });
+
+  usuarioCadastrado.save()
+  .then(data => {
+      res.json(data);
+  })
+  .catch(err => {
+      res.json(err);
+  })
 });
 
 module.exports = router;
