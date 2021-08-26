@@ -66,11 +66,11 @@ const registerTemplate = new mongoose.Schema({
     required: true,
   },
   veiculo: {
-    type: Boolean,
+    type: String,
     required: false,
   },
   habilitacao: {
-    type: Boolean,
+    type: String,
     required: false,
   },
   password: {

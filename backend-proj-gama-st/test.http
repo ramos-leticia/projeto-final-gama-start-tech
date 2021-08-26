@@ -1,0 +1,25 @@
+POST http://localhost:4000/app/cadastro
+Content-Type: application/json
+
+{
+    "nomeCompleto": "Amelie Poulain",
+    "dataNascimento": "12/05/2013", 
+    "logradouro": "Rua dos petiscos",
+    "numero": "50",
+    "bairro": "Dog Feliz",
+    "cidade": "Pedigree",
+    "estado": "Rio de janeiro",
+    "cep": "0000-000",
+    "telefoneFixo": "212222-2222",
+    "celular": "2199999-9999",
+    "email": "amelie@peluda.com",
+    "cargoPretendido": "segurança de quintal",
+    "estadoCivil": "solteirissima",
+    "genero": "feminino cis",
+    "identidade": "00000000-00",
+    "cpf": "000000000-00",
+    "veiculo": "não",
+    "habilitacao": "não",
+    "password": "amelie"
+}
+
