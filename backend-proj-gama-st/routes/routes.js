@@ -1,8 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const registerTemps = require("../models/cadastroModels");
+const bcrypt = require("bcrypt");
 
-router.post("/cadastro", (req, res) => {
+router.post("/cadastro", async (req, res) => {
+  const saltPassword = await bcrypt.genSalt(10);
+  const securePassword = await bcrypt.hash(req.body.password, saltPassword);
+
   const usuarioCadastrado = new registerTemps({
     nomeCompleto: req.body.nomeCompleto,
     dataNascimento: req.body.dataNascimento,
@@ -22,16 +26,17 @@ router.post("/cadastro", (req, res) => {
     cpf: req.body.cpf,
     veiculo: req.body.veiculo,
     habilitacao: req.body.habilitacao,
-    password: req.body.password,
+    password: securePassword,
   });
 
-  usuarioCadastrado.save()
-  .then(data => {
+  usuarioCadastrado
+    .save()
+    .then((data) => {
       res.json(data);
-  })
-  .catch(err => {
+    })
+    .catch((err) => {
       res.json(err);
-  })
+    });
 });
 
 module.exports = router;
