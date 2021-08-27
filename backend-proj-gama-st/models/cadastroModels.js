@@ -64,6 +64,7 @@ const registerTemplate = new mongoose.Schema({
   cpf: {
     type: String,
     required: true,
+    unique: true,
   },
   veiculo: {
     type: String,
