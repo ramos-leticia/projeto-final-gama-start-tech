@@ -5,21 +5,21 @@ import Navbar from "./components/navbar";
 import Footer from './components/footer';
 import Formulario from "./Formulario";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from "./pages/home";
+import Landing from "./components/landing";
 import Login from "./pages/login";
 
 function App() {
     return(
         <>
-        <Router>
-        <Navbar />
-        <Switch>
-            <Route path='/' exact={true} component={Home}/>
-            <Route path="/cadastro" exact={true} component={Formulario} />
-            <Route path="/login" exact={true} component={Login} />
-        </Switch>
-        <Footer />
-        </Router>
+            <Router>
+                <Navbar />
+                <Switch>
+                    <Route path='/' exact={true} component={Landing}/>
+                    <Route path="/cadastro" exact={true} component={Formulario} />
+                    <Route path="/login" exact={true} component={Login} />
+                </Switch>
+                <Footer />
+            </Router>
         </>
     )
 }

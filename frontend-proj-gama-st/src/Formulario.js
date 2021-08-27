@@ -382,7 +382,7 @@ class Formulario extends Component {
                 onChange={this.changeSenha}
                 value={this.state.password}
               />
-                <input class="btn btn-secondary" type="submit" value="Enviar"/>
+                <input className="btn" type="submit" id='btn-form' value="Enviar"/>
               
             </form>
           </div>

@@ -1,0 +1,163 @@
+:root {
+  --header: #94eeda;
+  --hover: #ffe480;
+  --titles: #c21a5f;
+  --text: #487687;
+  
+}
+
+.navbar {
+  background: var(--header);
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: "Roboto Slab", serif;
+}
+
+li .nav-list {
+    text-decoration: none;
+    border: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  max-width: 1500px;
+  border: none;
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 5rem;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-list {
+  height: 80px;
+}
+
+
+.nav-list {
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  text-decoration: none;
+  border: none;
+}
+
+ul {
+    text-decoration: none;
+}
+
+.nav-list:hover {
+  color: var(--titles);
+  transition: all 0.2s ease-out;
+  font-weight: 600;
+  border: none;
+}
+
+.fa-bars {
+  color: var(--text);
+}
+
+.nav-list-mobile {
+  display: none;
+  text-decoration: none;
+  border: none;
+}
+
+.icon-nav {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 130px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: var(--header);
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-list {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    text-decoration: none;
+  }
+
+  .icon-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color:var(--titles);
+    font-size: 2rem;
+  }
+
+  .nav-list-mobile {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--text);
+    padding: 14px 20px;
+    /* border: 1px solid #fff; */
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-list-mobile:hover {
+    color: var(--titles);
+    font-weight: 600;
+    transition: 250ms;
+  }
+}
