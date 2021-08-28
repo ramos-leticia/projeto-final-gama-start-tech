@@ -1,0 +1,46 @@
+:root {
+    --header: #94EEDA;
+    --hover: #FFE480;
+    --titles: #C21A5F;
+    --text: #487687;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto slab', serif;
+    color: var(--titles);
+    background-color: #e5f8f4;
+    padding: 3rem;
+}
+
+
+.form-title #h2 {
+	font-size: 1.5rem;
+    font-family: 'Roboto slab', serif;
+	font-weight: 600;
+    color: var(--titles);
+}
+
+.form-title #h3 {
+	font-size: 1.2rem;
+    font-family: 'Roboto slab', serif;
+	font-weight: 600;
+    color: var(--text);
+}
+
+#docs #hdocs {
+    font-size: 1.2rem;
+    font-family: 'Roboto slab', serif;
+	font-weight: 600;
+    color: var(--text);
+    margin-top: 2rem;
+}

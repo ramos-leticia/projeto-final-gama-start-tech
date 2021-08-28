@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css";
+import "./Formulario.css";
 import axios from "axios";
-
 
 class Formulario extends Component {
   constructor() {
@@ -199,12 +198,12 @@ class Formulario extends Component {
 
   render() {
     return (
-      <>      
-        <div className="container">
+      <>
+        <div className="container-form">
           <div className="form-area">
             <div className="form-title">
-              <h2>Cadastro</h2>
-              <h3>Dados pessoais</h3>
+              <h2 id='h2'>Cadastro</h2>
+              <h3 id='h3'>Dados pessoais</h3>
             </div>
             <form onSubmit={this.onSubmit}>
               <label for="name">Nome completo</label>
@@ -332,8 +331,8 @@ class Formulario extends Component {
                 <option value="outro">Prefiro não responder</option>
               </select>
 
-              <div className="docs">
-                <h3>Documentos</h3>
+              <div className="docs" id='docs'>
+                <h3 id='hdocs'>Documentos</h3>
               </div>
               <label for="rg">Identidade</label>
               <input
@@ -382,7 +381,14 @@ class Formulario extends Component {
                 onChange={this.changeSenha}
                 value={this.state.password}
               />
-                <input className="btn" type="submit" id='btn-form' value="Enviar"/>
+              <div className="d-grid gap-2">
+              <input
+                className="btn"
+                type="submit"
+                id="btn-form"
+                value="Enviar"
+              />
+              </div>
               
             </form>
           </div>

@@ -12,6 +12,32 @@
     text-decoration: none;
 }
 
+.login-user {
+    /* superior | direita | inferior | esquerda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0 30rem 0 30rem;
+}
+
+
+h2 {
+    padding: 3rem;
+	text-align: center;
+	font-size: 1.5rem;
+    font-family: 'Roboto slab', serif;
+	font-weight: 600;
+    color: var(--titles);
+}
+
+label {
+	text-align: center;
+	font-size: .9rem;
+    font-family: 'Roboto slab', serif;
+	font-weight: 400;
+    color: var(--text);
+}
 
 .btn {
     border: none;
