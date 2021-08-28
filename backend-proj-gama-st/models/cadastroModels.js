@@ -77,12 +77,10 @@ const registerTemplate = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
-  },
-  date: {
-    type: Date,
-    default: Date.now,
-  },
+    required: true
+  }
+}, { 
+  timestamps: true
 });
 
-module.exports = mongoose.model("cadastro-candidatos", registerTemplate);
+module.exports = mongoose.model("Cadastro", registerTemplate);

@@ -18,7 +18,7 @@ router.post("/cadastro", async (req, res) => {
     cep: req.body.cep,
     telefoneFixo: req.body.telefoneFixo,
     celular: req.body.celular,
-    email: req.body.celular,
+    email: req.body.email,
     cargoPretendido: req.body.cargoPretendido,
     estadoCivil: req.body.estadoCivil,
     genero: req.body.genero,
@@ -32,10 +32,12 @@ router.post("/cadastro", async (req, res) => {
   usuarioCadastrado
     .save()
     .then((data) => {
-      res.json(data);
+      res.status(202).send("Dados cadastrados com sucesso!");
+      console.log(data);
     })
     .catch((err) => {
-      res.json(err);
+      res.status(404).send("CPF ou Email já cadastrados!");
+      console.log(err);
     });
 });
 

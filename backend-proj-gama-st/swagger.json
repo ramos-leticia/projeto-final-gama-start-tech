@@ -13,10 +13,6 @@
         {
             "url": "http://localhost:4000",
             "description": "Ambiente de desenvolvimento"
-        },
-        {
-            "url": "http://",
-            "description": "API em produção"
         }
     ],
     "paths": {
@@ -61,10 +57,10 @@
                 },
                 "response": {
                     "400": {
-                        "description": "CPF já cadastrado!"
+                        "description": "CPF ou email já cadastrado"
                     },
                     "200": {
-                        "description": "Ok",
+                        "description": "Dados cadastrados com sucesso",
                         "content": {
                             "application/json": {
                                 "schema": {
