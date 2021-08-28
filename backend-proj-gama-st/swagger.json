@@ -1,0 +1,169 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de cadastro JobsNet",
+        "description": "API criada para o projeto final do treinamento fullstack Gama Academy + Start Tech e tem o objetivo de cadastrar candidatos em um banco de currículos", 
+        "termsOfSErvice": "",
+        "contact": {
+            "email": "ramos.marialeticiaalves@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:4000",
+            "description": "Ambiente de desenvolvimento"
+        },
+        {
+            "url": "http://",
+            "description": "API em produção"
+        }
+    ],
+    "paths": {
+        "/cadastro": {
+            "post": {
+                "summary":"Cadastro de candidates",
+                "descpription": "Rota responsável por cadastrar um novo candidato",
+                "tags": ["candidates"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Cadastro"
+                            },
+                            "examples": {
+                                "Cadastro":{
+                                    "value": {
+                                        "nomeCompleto": "meu nome",
+                                        "dataNascimento": "29/02/1977",
+                                        "logradouro": "Rua mais bonita",
+                                        "numero": "92",
+                                        "bairro": "Riacho grande",
+                                        "cidade": "Fictícia",
+                                        "estado": "Rio de Janeiro",
+                                        "cep": "0000-000",
+                                        "telefoneFixo": "(21) 1111-0000",
+                                        "celular": "(21) 90000-0000",
+                                        "email": "meuemail@email.com",
+                                        "cargoPretendido": "web developer",
+                                        "estadoCivil": "solteira",
+                                        "genero": "mulher cis",
+                                        "identidade": "00.000.000-0",
+                                        "cpf": "000.000.000-0",
+                                        "veiculo": "não",
+                                        "habilitacao": "não",
+                                        "password": "minhasenha"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "response": {
+                    "400": {
+                        "description": "CPF já cadastrado!"
+                    },
+                    "200": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Cadastro"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    },
+    "components": {
+        "schemas": {
+            "Cadastro": {
+                "type": "object",
+                "properties": {
+                    "nomeCompleto": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "dataNascimento": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "logradouro": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "numero": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "bairro": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "cidade": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "estado": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "cep": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "telefoneFixo": {
+                        "type": "String",
+                        "required": false
+                    },
+                    "celular": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "email": {
+                        "type": "String",
+                        "required": true,
+                        "unique": true
+                    },
+                    "cargoPretendido": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "estadoCivil": {
+                        "type": "String",
+                        "required": false
+                    },
+                    "genero": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "identidade": {
+                        "type": "String",
+                        "required": true
+                    },
+                    "cpf": {
+                        "type": "String",
+                        "required": true,
+                        "unique": true
+                    },
+                    "veiculo": {
+                        "type": "String",
+                        "required": false
+                    },
+                    "habilitacao": {
+                        "type": "String",
+                        "required": false
+                    },
+                    "password": {
+                        "type": "String",
+                        "required": true
+                    }
+                }
+            }
+        }
+    }
+}

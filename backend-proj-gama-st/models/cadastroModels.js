@@ -44,6 +44,7 @@ const registerTemplate = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   cargoPretendido: {
     type: String,
@@ -55,7 +56,7 @@ const registerTemplate = new mongoose.Schema({
   },
   genero: {
     type: String,
-    required: true,
+    required: false,
   },
   identidade: {
     type: String,
@@ -84,4 +85,4 @@ const registerTemplate = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('cadastro-candidatos', registerTemplate);
+module.exports = mongoose.model("cadastro-candidatos", registerTemplate);
