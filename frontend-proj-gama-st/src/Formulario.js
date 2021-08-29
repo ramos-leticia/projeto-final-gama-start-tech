@@ -27,6 +27,7 @@ class Formulario extends Component {
       habilitacao: "",
       password: "",
     };
+
     this.changeName = this.changeName.bind(this);
     this.changeBirth = this.changeBirth.bind(this);
     this.changeLogradouro = this.changeLogradouro.bind(this);
@@ -169,10 +170,16 @@ class Formulario extends Component {
       habilitacao: this.state.habilitacao,
       password: this.state.password,
     };
-    axios
-      .post("http://localhost:4000/app/cadastro", registrado)
-      .then((res) => console.log(res.data));
 
+
+    axios      
+      .post("http://localhost:4000/app/cadastro", registrado)
+      .then((res) => {
+        console.log(res.data);
+        alert('Dados cadastrados com sucesso');
+      });   
+    
+      
     this.setState({
       nomeCompleto: "",
       dataNascimento: "",
@@ -196,7 +203,8 @@ class Formulario extends Component {
     });
   }
 
-  render() {
+  render() {    
+
     return (
       <>
         <div className="container-form">
@@ -266,7 +274,7 @@ class Formulario extends Component {
               <input
                 type="text"
                 className="form-control form-group"
-                placeholder="ex: 00000-000"
+                placeholder="00000000"
                 onChange={this.changeCep}
                 value={this.state.cep}
               />
@@ -274,7 +282,7 @@ class Formulario extends Component {
               <input
                 type="text/phone"
                 className="form-control form-group"
-                placeholder=" ex: (xx) xxxxx-xxxx"
+                placeholder=" ex: 21999999999"
                 onChange={this.changeFone}
                 value={this.state.telefoneFixo}
               />
@@ -282,7 +290,7 @@ class Formulario extends Component {
               <input
                 type="text/phone"
                 className="form-control form-group"
-                placeholder="(xx) xxxxx-xxxx"
+                placeholder="ex: 21999999999"
                 onChange={this.changeCel}
                 value={this.state.celular}
               />
@@ -338,7 +346,7 @@ class Formulario extends Component {
               <input
                 type="text"
                 className="form-control form-group"
-                placeholder="ex: 11.111.111-1"
+                placeholder="ex: 000000000"
                 onChange={this.changeRg}
                 value={this.state.identidade}
               />
@@ -346,7 +354,7 @@ class Formulario extends Component {
               <input
                 type="text"
                 className="form-control form-group"
-                placeholder="ex: 111.111.111-11"
+                placeholder="ex: 00000000000"
                 onChange={this.changeCpf}
                 value={this.state.cpf}
               />
