@@ -18,4 +18,5 @@ app.use(express.json());
 app.use('/jobsNet-api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(cors());
 app.use('/app', routesUrls);
+
 app.listen(port, () => console.info(`Servidor rodando em localhost:${port}`));

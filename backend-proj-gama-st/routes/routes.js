@@ -32,11 +32,11 @@ router.post("/cadastro", async (req, res) => {
   usuarioCadastrado
     .save()
     .then((data) => {
-      res.status(202).send("Dados cadastrados com sucesso!");
+      res.status(200).send("Dados cadastrados com sucesso!");
       console.log(data);
     })
     .catch((err) => {
-      res.status(404).send("CPF ou Email já cadastrados!");
+      res.status(400).send("CPF ou Email já cadastrados!");
       console.log(err);
     });
 });
