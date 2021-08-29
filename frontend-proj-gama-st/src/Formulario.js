@@ -171,15 +171,11 @@ class Formulario extends Component {
       password: this.state.password,
     };
 
+    axios.post("http://localhost:4000/app/cadastro", registrado).then((res) => {
+      console.log(res.data);
+      alert("Dados cadastrados com sucesso");
+    });
 
-    axios      
-      .post("http://localhost:4000/app/cadastro", registrado)
-      .then((res) => {
-        console.log(res.data);
-        alert('Dados cadastrados com sucesso');
-      });   
-    
-      
     this.setState({
       nomeCompleto: "",
       dataNascimento: "",
@@ -203,15 +199,14 @@ class Formulario extends Component {
     });
   }
 
-  render() {    
-
+  render() {
     return (
       <>
         <div className="container-form">
           <div className="form-area">
             <div className="form-title">
-              <h2 id='h2'>Cadastro</h2>
-              <h3 id='h3'>Dados pessoais</h3>
+              <h2 id="h2">Cadastro</h2>
+              <h3 id="h3">Dados pessoais</h3>
             </div>
             <form onSubmit={this.onSubmit}>
               <label for="name">Nome completo</label>
@@ -339,8 +334,8 @@ class Formulario extends Component {
                 <option value="outro">Prefiro não responder</option>
               </select>
 
-              <div className="docs" id='docs'>
-                <h3 id='hdocs'>Documentos</h3>
+              <div className="docs" id="docs">
+                <h3 id="hdocs">Documentos</h3>
               </div>
               <label for="rg">Identidade</label>
               <input
@@ -390,14 +385,13 @@ class Formulario extends Component {
                 value={this.state.password}
               />
               <div className="d-grid gap-2">
-              <input
-                className="btn"
-                type="submit"
-                id="btn-form"
-                value="Enviar"
-              />
+                <input
+                  className="btn"
+                  type="submit"
+                  id="btn-form"
+                  value="Enviar"
+                />
               </div>
-              
             </form>
           </div>
         </div>
