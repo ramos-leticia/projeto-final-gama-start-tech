@@ -1,5 +1,5 @@
-import Landing from "../components/landing";
-import Formulario from "../Formulario";
+import Landing from "./components/landing";
+import Formulario from "./Formulario";
 
 function Home () {
     return (

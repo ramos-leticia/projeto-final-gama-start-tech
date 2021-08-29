@@ -6,7 +6,7 @@ import Formulario from "./Formulario";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from "./components/landing";
 import Login from "./pages/login";
-import Home from "./pages/Home";
+import Home from "./Home";
 
 function App() {
   return (
