@@ -11,6 +11,7 @@ function Navbar() {
     const handleClick = () => setClick(!click);
     const closeMenu = () => setClick(false);
 
+
     return (
         <>
             <nav className='navbar'>
@@ -28,9 +29,9 @@ function Navbar() {
                         <li className='nav-list'>
                             <Link to='/cadastro' className='nav-links' onClick={closeMenu}>Cadastrar</Link>
                         </li>
-                        <li className='nav-list'>
+                        {/* <li className='nav-list'>
                             <Link to='/login' className='nav-links' onClick={closeMenu}>Entrar</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </nav>
