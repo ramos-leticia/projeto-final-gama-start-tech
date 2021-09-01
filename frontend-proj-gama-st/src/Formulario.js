@@ -199,6 +199,19 @@ class Formulario extends Component {
     });
   }
 
+  onBlurCep(e) {
+    const { value } = e.target;
+
+    const cep = value?.replace(/[^0-9]/g, '');
+
+    if (cep?.length !== 8) {
+      return;
+    }
+    fetch(`http://viacep.com.br/ws/${cep}/json/`)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
+
   render() {
     return (
       <>
@@ -227,6 +240,7 @@ class Formulario extends Component {
               />
               <label for="address">Logradouro*</label>
               <input
+                name="logradouro"
                 type="text"
                 className="form-control form-group"
                 placeholder=" "
@@ -235,6 +249,7 @@ class Formulario extends Component {
               />
               <label for="number">Numero*</label>
               <input
+                name="numero"
                 type="text"
                 className="form-control form-group"
                 placeholder=" "
@@ -243,6 +258,7 @@ class Formulario extends Component {
               />
               <label for="neighbour">Bairro*</label>
               <input
+                name="bairro"
                 type="text"
                 className="form-control form-group"
                 placeholder=""
@@ -251,6 +267,7 @@ class Formulario extends Component {
               />
               <label for="city">Cidade*</label>
               <input
+                name="cidade"
                 type="text"
                 className="form-control form-group"
                 placeholder=""
@@ -259,6 +276,7 @@ class Formulario extends Component {
               />
               <label for="state">Estado</label>
               <input
+                name="uf"
                 type="text"
                 className="form-control form-group"
                 placeholder=""
@@ -267,11 +285,13 @@ class Formulario extends Component {
               />
               <label for="cep">CEP*</label>
               <input
+                name="cep"
                 type="text"
                 className="form-control form-group"
-                placeholder="00000000"
+                placeholder="Somente números. Ex: 00000000"
                 onChange={this.changeCep}
                 value={this.state.cep}
+                onBlur={this.onBlurCep}
               />
               <label for="phone">Telefone fixo</label>
               <input
@@ -341,7 +361,7 @@ class Formulario extends Component {
               <input
                 type="text"
                 className="form-control form-group"
-                placeholder="ex: 000000000"
+                placeholder="Somente números. Ex: 000000000"
                 onChange={this.changeRg}
                 value={this.state.identidade}
               />
@@ -349,7 +369,7 @@ class Formulario extends Component {
               <input
                 type="text"
                 className="form-control form-group"
-                placeholder="ex: 00000000000"
+                placeholder="Somente números. Ex: 00000000000"
                 onChange={this.changeCpf}
                 value={this.state.cpf}
               />
