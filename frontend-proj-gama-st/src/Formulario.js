@@ -206,10 +206,18 @@ class Formulario extends Component {
 
     if (cep?.length !== 8) {
       return;
-    }
+    }   
+
     fetch(`http://viacep.com.br/ws/${cep}/json/`)
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data.localidade,
+        data.bairro,
+        data.uf,
+        data.logradouro,);
+          
+               
+      });
   }
 
   render() {
@@ -237,6 +245,16 @@ class Formulario extends Component {
                 placeholder="ex: DD/MM/AAAA"
                 onChange={this.changeBirth}
                 value={this.state.dataNascimento}
+              />
+              <label for="cep">CEP*</label>
+              <input
+                name="cep"
+                type="text"
+                className="form-control form-group"
+                placeholder="Somente números. Ex: 00000000"
+                onChange={this.changeCep}
+                value={this.state.cep}
+                onBlur={this.onBlurCep}
               />
               <label for="address">Logradouro*</label>
               <input
@@ -282,17 +300,7 @@ class Formulario extends Component {
                 placeholder=""
                 onChange={this.changeEstado}
                 value={this.state.estado}
-              />
-              <label for="cep">CEP*</label>
-              <input
-                name="cep"
-                type="text"
-                className="form-control form-group"
-                placeholder="Somente números. Ex: 00000000"
-                onChange={this.changeCep}
-                value={this.state.cep}
-                onBlur={this.onBlurCep}
-              />
+              />              
               <label for="phone">Telefone fixo</label>
               <input
                 type="text/phone"
@@ -388,8 +396,8 @@ class Formulario extends Component {
               <label for="license">Habilitação</label>
               <select
                 className="form-select"
-                id="car"
-                name="car"
+                id="lic"
+                name="lic"
                 onChange={this.changeLicense}
                 value={this.state.habilitacao}
               >
