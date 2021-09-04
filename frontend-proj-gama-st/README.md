@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# JobsNET
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-tecnologias">Tecnologias utilizadas</a> •  
+ <a href="#-autor">Autora</a> • 
+ <a href="#user-content--licença">Licença</a>
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+## Sobre o projeto
 
-### `yarn start`
+JobsNET - é um site para cadastro de currículos, onde o candidato se inscreve e fica disponível para empresas o contratarem.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Projeto desenvolvido durante o bootcamp **Desenvolvimento Full-stack** oferecido pela parceria Start Tech + Gama Academy.
+Neste bootcamptivemos a oportunidade de aprender e praticar os fundamentos de ReactJS e Node.js, além de noções de testes, boas práticas e desenvolvimento de soft skills.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O usuário cadastra seus dados, informações de contato, cargo pretendido e envia o formulário para ser disponibilizado.
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- ## 🎨 Layout -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Tecnologias utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+As seguintes ferramentas foram usadas na construção do projeto:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### **Website**  **(React)**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   **React Router Dom**
+-   **React Dom**
+-   **Bootstrap**
+-   **Axios**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> Veja o arquivo  [package.json](https://github.com/Leticia-R/projeto-final-gama-start-tech/blob/main/frontend-proj-gama-st/package.json)
 
-## Learn More
+#### **Server**  **(NodeJS)**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   **Express**
+-   **CORS**
+-   **dotENV**
+-   **bycrypt**
+-   **mongoose**
+-   **nodemon**
+-   **swagger ui express**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Veja o arquivo  [package.json](https://github.com/Leticia-R/projeto-final-gama-start-tech/blob/main/backend-proj-gama-st/package.json)
 
-### Code Splitting
+**Utilitários**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+-   API:  **[VIACEP](https://viacep.com.br/)**  
+-   Editor:  **Visual Studio Code**
+-   **[Font Awesome](https://fontawesome.com/)**
+-   Fontes:  **[Oswald](https://fonts.google.com/specimen/Oswald)**,  **[Roboto slab](https://fonts.google.com/specimen/Roboto+Slab)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Como contribuir para o projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Este projeto esta sobe a licença [MIT](./LICENSE).
 
-### `yarn build` fails to minify
+Feito com ❤️ por Leticia Ramos 👋🏽 [Entre em contato!](https://www.linkedin.com/in/ramos-leticia/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
