@@ -14,8 +14,8 @@ function Navbar() {
 
     return (
         <>
-            <nav className='navbar'>
-                <div className="nav-container">
+            <nav className='navbar '>
+                <div className="nav-container nav-list-mobile">
                     <Link to='/' className="logo">                      
                         <img src={logo} alt="Logo JobsNET" onClick={closeMenu}/>                        
                     </Link>

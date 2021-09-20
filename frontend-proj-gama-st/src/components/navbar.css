@@ -12,26 +12,32 @@
 .navbar {
   background: var(--header);
   display: flex;
-  height: 10rem;
+  height: 7rem;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   position: sticky;
   top: 0;
   z-index: 999;
   font-family: "Roboto Slab", serif;
 }
 
-li .nav-list {
+.nav-links {
     text-decoration: none;
-    border: 0;
+    font-size: 1.2rem;
+}
+
+.nav-links:hover {
+    color: var(--titles);
+    font-weight:600;
+    transition: .3s;
 }
 
 .nav-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10rem;
+  height: 6rem;
   max-width: 1500px;
   border: none;
 }
@@ -66,13 +72,9 @@ li .nav-list {
   align-items: center;
   padding: 0.5rem 1rem;
   height: 100%;
-  text-decoration: none;
   border: none;
 }
 
-ul {
-    text-decoration: none;
-}
 
 .nav-list:hover {
   color: var(--titles);
@@ -85,11 +87,6 @@ ul {
   color: var(--text);
 }
 
-.nav-list-mobile {
-  display: none;
-  text-decoration: none;
-  border: none;
-}
 
 .icon-nav {
   display: none;
@@ -125,7 +122,6 @@ ul {
     padding: 3rem;
     width: 100%;
     display: table;
-    text-decoration: dashed;
   }
 
   .icon-nav {
@@ -146,15 +142,13 @@ ul {
   .nav-list-mobile {
     display: block;
     text-align: center;
-    margin: 2rem auto;
-    /* border-radius: 4px; */
-    width: 80%;
+    margin: 1rem auto;
+    width: 70%;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: transparent;
     color: var(--text);
-    padding: 14px 20px;
-    /* border: 1px solid #fff; */
+    padding: 10px 10px;
     transition: all 0.3s ease-out;
   }
 

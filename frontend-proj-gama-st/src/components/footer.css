@@ -1,6 +1,9 @@
-* {
-    text-decoration: none;
-}
+:root {
+    --header: #94eeda;
+    --hover: #ffe480;
+    --titles: #c21a5f;
+    --text: #487687;
+  }
 
 .footer-container {
     background-color: var(--header);
@@ -22,6 +25,14 @@
     font-family: 'Roboto slab', serif;
 }
 
-.footer-container p .attributiion {
-    text-decoration: none !important;
+a {
+    text-decoration: none;  
+    color: var(--text); 
+    font-size: .85rem; 
+}
+
+a:hover {
+    color: var(--titles);
+    font-weight: 600;
+    transition: 250ms;
 }
